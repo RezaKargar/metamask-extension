@@ -40,6 +40,16 @@ addParameters({
 });
 
 export const globalTypes = {
+  theme: {
+    name: 'Theme',
+    description: 'Global theme for components',
+    defaultValue: 'light',
+    toolbar: {
+      icon: 'photo',
+      // array of plain string values or MenuItem shape (see below)
+      items: ['light', 'dark'],
+    },
+  },
   locale: {
     name: 'Locale',
     description: 'internationalization locale',
@@ -105,7 +115,17 @@ const metamaskDecorator = (story, context) => {
             current={current}
             en={allLocales.en}
           >
-            <LegacyI18nProvider>{story()}</LegacyI18nProvider>
+            <LegacyI18nProvider>
+              <div
+                style={{
+                  padding: 16,
+                  backgroundColor: 'var(--color-background-default)',
+                }}
+                data-theme={theme === 'dark' ? 'dark' : ''}
+              >
+                {story()}
+              </div>
+            </LegacyI18nProvider>
           </I18nProvider>
         </MetaMetricsProviderStorybook>
       </Router>
