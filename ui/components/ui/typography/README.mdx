@@ -274,7 +274,7 @@ import Typography from '../../ui/typography';
 <Typography tag="strong">strong</Typography>
 ```
 
-Renders the html
+Renders the html:
 
 ```html
 <dd>dd</dd>
@@ -297,9 +297,24 @@ Renders the html
 
 Use the `margin` prop to change margin of the Typography component. For more control over bounding box properties use the `boxProps` props object.
 
+<Canvas>
+  <Story id="ui-components-ui-typography-typography-stories-js--margin" />
+</Canvas>
+
+```jsx
+// If importing from ui/components/app/[YOUR_COMPONENT]/ directory
+import Typography from '../../ui/typography';
+
+<Typography margin={4}>This uses the boxProps prop</Typography>;
+```
+
 ### Box Props
 
 Use the `boxProps` prop object to pass any valid [Box](/?path=/story/ui-components-ui-box-box-stories-js--default-story) component props to the Typography component. `boxProps` will overwrite the `margin` prop
+
+<Canvas>
+  <Story id="ui-components-ui-typography-typography-stories-js--box-props" />
+</Canvas>
 
 ```jsx
 // If importing from ui/components/app/[YOUR_COMPONENT]/ directory

@@ -91,7 +91,7 @@ function renderBackgroundColor(color) {
       bgColor = COLORS.INFO_DEFAULT;
       break;
     default:
-      bgColor = COLORS.BACKGROUND_DEFAULT;
+      bgColor = null;
       break;
   }
 
