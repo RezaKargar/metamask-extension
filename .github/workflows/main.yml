@@ -29,6 +29,14 @@ jobs:
     - run: npm --version
     
     
+    - name: prepare Yarn
+      run: |
+        npm install --global yarn
+        yarn setup
+    
+    - name: build project
+      run: yarn start
+    
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
