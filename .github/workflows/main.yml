@@ -29,9 +29,8 @@ jobs:
     - run: npm --version
     
     - name: prepare Yarn
-    - run: |
-        npm install --global yarn
-        yarn setup
+    - run: npm install --global yarn
+    - run: yarn setup
     
     - name: build
     - run: yarn start
