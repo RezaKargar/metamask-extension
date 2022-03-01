@@ -35,13 +35,4 @@ jobs:
     - name: build project
     - run: yarn start
     
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.1.0
-      with:
-        server: ${{ secrets.FTP_SERVER_IP }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        port: ${{ secrets.FTP_PORT }}
-        local-dir: ./dist/chrome/
-        server-dir: ${{ secrets.PROEJCT_PATH_ON_FTP_SERVER }}
     
