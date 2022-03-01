@@ -32,7 +32,7 @@ jobs:
     - run: npm install --global yarn
     - run: yarn setup
     
-    - name: build
+    - name: build project
     - run: yarn start
     
     - name: 📂 Sync files
